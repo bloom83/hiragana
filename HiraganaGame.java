@@ -29,7 +29,7 @@ public class HiraganaGame {
                              "てぃ","っ",
                              "ぁ","ぃ","ぅ","ぇ","ぉ",
                              "ゃ","ゅ","ょ"
-			     };
+                             };
 
         String[] dakuon = {
                           "が","ぎ","ぐ","げ","ご",
@@ -49,7 +49,7 @@ public class HiraganaGame {
                            };
 
         // ヒント用アルファベット
-	String[] abc = {
+        String[] abc = {
                        "a","i","u","e","o",
                        "ka","ki","ku","ke","ko",
                        "sa","si","su","se","so",
@@ -99,10 +99,10 @@ public class HiraganaGame {
         if(test.equals("i")) {
 	    System.out.println("にゅうりょくもーどが あっていないよ！");
             System.out.println("Aぼたんの ひだりどなりにある CapsLockぼたんを おして\n"
-	    			+ " にゅうりょくもーどを きりかえてね");
+	                           + " にゅうりょくもーどを きりかえてね");
         }else {
              System.out.println("げーむを はじめられるよ");
-	}
+        }
 
         System.out.println("れべる" + level + "から はじまるよ");
         do {
@@ -111,8 +111,8 @@ public class HiraganaGame {
             int num1 = (int)(Math.random()*(hiragana.length));
 
             System.out.println(hiragana[num1] + "\n とおなじひらがなを入力してね！");
-	    System.out.println("がめんに うつってる あるふぁべっとと おなじのを おしてみてね ");
-             System.out.println(abc[num1]);
+	        System.out.println("がめんに うつってる あるふぁべっとと おなじのを おしてみてね ");
+            System.out.println(abc[num1]);
             String ans1 = new java.util.Scanner(System.in).nextLine();
 
             //入力判定
@@ -165,7 +165,7 @@ public class HiraganaGame {
                     }
                 }else {
                     System.out.println("ざんねん せいかいできるまで ちょうせんしてね");
-				}
+                }
             }
             while(corect < clg);
         }
@@ -177,9 +177,9 @@ public class HiraganaGame {
         System.out.println("はい ： y  / いいえ ： n");
         ctn = new java.util.Scanner(System.in).nextLine();
 
-	if(ctn.equals("y")){
+        if(ctn.equals("y")){
             System.out.println("げーむを つづけてくれて ありがとう！");
-            System.out.println("れべる２からは ひらがなに【 ゛】が つく もんだいだよ！");
+            System.out.println("れべる" + level + "からは ひらがなに【゜】が つく もんだいだよ！");
             System.out.println("がんばってね！");
 
             do {
@@ -200,10 +200,10 @@ public class HiraganaGame {
                         System.out.println("れべるが 1 あがったよ！ おめでとう！");
                     }else {
                         System.out.println("あと" + (count) + "せいかいすると れべるがあがるよ");
-					}
+                    }
                 }else {
-                    System.out.println("ざんねん せいかいできるまで ちょうせんしてね");
-				}
+                	System.out.println("ざんねん せいかいできるまで ちょうせんしてね");
+                }
             }
             while(corect < clg);
 
@@ -211,7 +211,19 @@ public class HiraganaGame {
         level++;
         clg = 0;
 
-	System.out.println("れべるが" + level + "になりました！");
+        System.out.println("れべるが" + level + "になりました！");
+        System.out.println("まだ げーむを つづける？ つづけるなら y を おわりたいなら n をおしてね！" );
+        System.out.println("はい ： y  / いいえ ： n");
+        ctn = new java.util.Scanner(System.in).nextLine();
 
+        if(ctn.equals("y")){
+            System.out.println("げーむを つづけてくれて ありがとう！");
+            System.out.println("れべる" + level + "は さいごの\n "
+                               + "ひらがなもんだいだよ！");
+            System.out.println("がんばってね！");
+
+
+
+        }
     }
 }
