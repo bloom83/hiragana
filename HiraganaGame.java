@@ -4,7 +4,7 @@ public class HiraganaGame {
     public static void main(String[] args) {
 
 
-        int level = 1;
+    int level = 1;
 	int corect = 0;
 	int clg = 0;
 	int count = clg - corect;
@@ -18,7 +18,7 @@ public class HiraganaGame {
 	                     "ま","み","む","め","も",
 	                     "や","ゆ","よ",
                              "ら","り","る","れ","ろ",
-                             "わ","を","ん,
+                             "わ","を","ん",
                              "きゃ","きゅ","きょ",
                              "しゃ","しゅ","しぇ","しょ",
                              "ちゃ","ちゅ","ちぇ","ちょ",
@@ -215,4 +215,3 @@ public class HiraganaGame {
 
     }
 }
-
