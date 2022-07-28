@@ -1,6 +1,6 @@
 package hiragana;
 
-public abstract class Hiragana_list {
+public class Hiragana_list {
 
 
 
@@ -27,6 +27,9 @@ public abstract class Hiragana_list {
             "ぁ","ぃ","ぅ","ぇ","ぉ",
             "ゃ","ゅ","ょ"
             };
+    public String[] getHiragana() {return this.hiragana;}
+    public String getHiragana(int n){ return this.hiragana[n]; }
+
 
     // ヒント用ひらがな 濁音
     private final String[] dakuon = {
@@ -40,11 +43,17 @@ public abstract class Hiragana_list {
             "びゃ","びゅ","びょ",
             "でぃ"
             };
+    public String[] getDakuon() { return this.dakuon; }
+    public String getDakuon(int n) { return this.dakuon[n]; }
+
+
     // ヒント用ひらがな 半濁音
     private final String[] hanDaku = {
             "ぱ","ぴ","ぷ","ぺ","ぽ",
             "ぴゃ","ぴゅ","ぴょ"
             };
+    public String[] getHanDaku() { return this.hanDaku;}
+    public String getHanDaku(int n) { return this.hanDaku[n];}
 
     // 最終問題用 ひらがな全部
     private final String[] alHira = {
@@ -80,6 +89,8 @@ public abstract class Hiragana_list {
             "ぱ","ぴ","ぷ","ぺ","ぽ",
             "ぴゃ","ぴゅ","ぴょ"
            };
+    public String[] getAlHira() { return this.alHira;}
+    public String getAlHira(int n) { return this.alHira[n];}
 
     // ヒント用アルファベット
     private final String[] abc = {
@@ -104,6 +115,8 @@ public abstract class Hiragana_list {
             "la","li","lu","le","lo",
             "lya","lyu","lyo"
             };
+    public String[] getAbc() { return this.abc;}
+    public String getAbc(int n) { return this.abc[n];}
 
     // ヒント用アルファベット 濁音
     private final String[] dakuAbc = {
@@ -117,12 +130,16 @@ public abstract class Hiragana_list {
             "bya","byu","byo",
             "dhi"
             };
+    public String[] getDakuAbc() { return this.dakuAbc;}
+    public String getDakuAbc(int n) { return this.dakuAbc[n];}
 
     // ヒント用アルファベット 半濁音
     private final String[] handakuAbc = {
     		"pa","pi","pu","pe","po",
     		"pya","pyu","pyo"
             };
+    public String[] getHandakuAbc() { return this.handakuAbc;}
+    public String getHandakuAbc(int n) { return this.handakuAbc[n];}
 
     // ヒント用アルファベット全部
     private final String[] alAbc = {
@@ -158,31 +175,7 @@ public abstract class Hiragana_list {
     		"pa","pi","pu","pe","po",
     		"pya","pyu","pyo"
             };
+    public String[] getAlAbc() {return this.alAbc;}
+    public String getAlAbc(int n) {return this.alAbc[n];}
 
-    private int level;
-    public int getLevel() { return this.level;}
-    public void setLevel(int level) {this.level = level ; }
-
-    private int collect;
-    public int getCollect() { return this.collect;}
-    public void setCollect(int collect) { this.collect = collect;}
-
-    private int clg;
-    public int getClg() { return this.clg ;}
-    public void setClg(int clg) { this.clg = clg ;}
-
-    private int count = this.getClg() - this.getCollect();
-    public int getCount() {return this.count ;}
-
-    public Hiragana_list( ) {
-    	this.level = 1;
-    	this.collect = 0;
-    	this.clg = 10;
-    }
-
-    public Hiragana_list(int level, int collect, int clg) {
-    	this.setLevel(level);
-    	this.setCollect(collect);
-    	this.setClg(clg);
-    }
 }
