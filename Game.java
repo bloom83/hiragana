@@ -52,47 +52,23 @@ public abstract class Game extends Hiragana_list{
         }
 	}
 
-    public void gameStart() {
+    abstract public void gameStart();
 
+    public void gameEnd() {
+    	System.out.println("れべるが" + this.getLevel() + "になりました！");
+        System.out.println("まだ げーむを つづける？ つづけるなら y を おわりたいなら n をおしてね！" );
+        System.out.println("はい ： y  / いいえ ： n");
+        String ctn = new java.util.Scanner(System.in).nextLine();
+    	if(ctn.equals("y")){
+            System.out.println("げーむを つづけてくれて ありがとう！");
+            System.out.println("れべる" + level + "からは ひらがなに【゜】が つく もんだいだよ！");
+            System.out.println("がんばってね！");
 
-        if (this.getLevel() <= 1) {
-        	this.insert();
+    	}else {
+            System.out.println("あそんでくれてありがとう！またきてね");
+            System.exit(0);
         }
-
-        System.out.println("がめんに ででる ひらがな と  おなじ ひらがな を うちこんでね ！");
-        System.out.println("れべるが あがると だんだん もんだいが むずかしくなるよ！");
-        System.out.println();
-        System.out.println("れべる" + this.getLevel() + "から はじまるよ");
-
-        do {
-        	Hiragana_list h = new Hiragana_list();
-        	num = (int)(Math.random()*(h.getHiragana().length));
-            this.setClg(10);
-
-
-            System.out.println(h.getHiragana(num) + "\n とおなじひらがなを入力してね！");
-            System.out.println("がめんに うつってる あるふぁべっとと おなじのを おしてみてね ");
-            System.out.println(getAbc(num));
-            String ans = new java.util.Scanner(System.in).nextLine();
-
-            //入力判定
-            if(ans.equals(hiragana[num1])) {
-                corect++;
-                count = clg-corect;
-                System.out.println("だいせいかい。おめでとう！");
-
-                if(count <= 0) {
-                    System.out.println("れべるが 1 あがったよ！");
-                }else {
-                    System.out.println("あと" + count + "せいかいすると れべるがあがるよ");
-                }
-            }else {
-                System.out.println("ざんねん せいかいできるまで ちょうせんしてね");
-            }
-        }
-        while(corect < clg);
-        level++;
-        clg = 0;
 
     }
+
 }
